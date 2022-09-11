@@ -1,4 +1,4 @@
-Solving competitive programming problems.
+Solving competitive programming problems. 
 
 ## Google Coding Jam
 ### Google Code Jam 2022
