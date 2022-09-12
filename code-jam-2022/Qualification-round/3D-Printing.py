@@ -25,4 +25,41 @@ for p in range(0, T*3):
 # we have acces to data with this form:
 # triplets[triplet][printer][color]
 
-print(triplets)
+
+
+
+def casesolution(case):
+    # remember: case is a triplet of printers
+    # Because of restrictions of the problem:
+    mins = [10**6, 10**6, 10**6, 10**6]
+    for printer in case:
+        for i in range(0, 3):
+            if printer[i] < mins[i]:
+                mins[i] = printer[i]
+    
+    if sum(mins) < 10**6:
+        return 'IMPOSSIBLE'
+
+    # Now that it is not impossible, we have to make the total sum: 10**6
+    solution = [0, 0, 0, 0]
+    total = sum(solution)
+    i = 0
+
+    while total < 10**6:
+        solution[i] = mins[i]
+        total = total + mins[i]
+        i = i + 1
+    i = i-1
+
+    if total > 10**6:
+        solution[i] = solution[i] - (total%(10**6))
+        total = sum(solution)
+    
+    # A not elegant at all solution...
+    return  str(solution[0]) + ' ' + \
+            str(solution[1]) + ' ' + \
+            str(solution[2]) + ' ' + \
+            str(solution[3])
+
+for case in range(0, T):
+    print("Case #" + str(case+1) + ': ' + casesolution(triplets[case]))
