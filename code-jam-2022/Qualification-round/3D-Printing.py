@@ -33,7 +33,7 @@ def casesolution(case):
     # Because of restrictions of the problem:
     mins = [10**6, 10**6, 10**6, 10**6]
     for printer in case:
-        for i in range(0, 3):
+        for i in range(0, len(printer)):
             if printer[i] < mins[i]:
                 mins[i] = printer[i]
     
@@ -45,16 +45,13 @@ def casesolution(case):
     total = sum(solution)
     i = 0
 
-    while total < 10**6:
-        solution[i] = mins[i]
-        total = total + mins[i]
-        i = i + 1
-    i = i-1
-
-    if total > 10**6:
-        solution[i] = solution[i] - (total%(10**6))
-        total = sum(solution)
-    
+    for i in range(0, len(mins)):
+        if total < 10**6:
+            solution[i] = mins[i]
+            total = total + mins[i]
+        if total > 10**6:
+            solution[i] = solution[i] - (total%(10**6))
+            total = sum(solution)
     # A not elegant at all solution...
     return  str(solution[0]) + ' ' + \
             str(solution[1]) + ' ' + \
