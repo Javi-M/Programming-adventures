@@ -1,6 +1,13 @@
-Solving competitive programming problems. 
+# Programming adventures
+A repository in which I solve competitive programming problems.
+Initially I do not think to solve security challenges, but who knows.
 
-## Google Coding Jam
-### Google Code Jam 2022
-* Qualification round (problems)
-    * Punched cards | https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a4621b
+I am not uploading the problems statements. You may want to check them out in the respective web sites.
+
+Here I let you the structure of problems and their competitions.
+
+# Google Coding Jam
+## Google Code Jam 2022
+### Qualification round (problems solved)
+* Punched cards
+* 3D-Printing
