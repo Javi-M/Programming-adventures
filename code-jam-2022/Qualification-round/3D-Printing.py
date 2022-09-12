@@ -20,6 +20,4 @@ for p in range(0, T*3):
         triplets.append(newtriplet)
         newtriplet = []
 
-print(triplets)
-
 ###########################################
