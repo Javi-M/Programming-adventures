@@ -1,8 +1,3 @@
-
-# Punched Card Python
-# Input: T (test cases)
-
-# R x C matrix
 T = int(input())
 inputdata = []
 for i in range(0, T):
