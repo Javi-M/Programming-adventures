@@ -19,5 +19,10 @@ for p in range(0, T*3):
     if t == 3: # if the triplet is completed
         triplets.append(newtriplet)
         newtriplet = []
+        t = 0
 
 ###########################################
+# we have acces to data with this form:
+# triplets[triplet][printer][color]
+
+print(triplets)
