@@ -15,13 +15,18 @@
 T = int(input())
 total_solution = [] # This will be the list of solutions (each one a list)
 
-
 def solve_case(dices):
-    maxlen = 1 # We know at least a dice is received
+    ml = 0 # max. len. found
     dices.sort()
-    
-
-    return maxlen
+    n = 0
+    d = 0 # displacement
+    for i in range(0, dices):
+        n = i + 1 - d
+        if dices[i] >= n:
+            ml = ml + 1
+        else:
+            d = d + 1
+    return ml
 
 for case in range(0, T):
     N = input()
