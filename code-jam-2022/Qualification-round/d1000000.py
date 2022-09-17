@@ -2,7 +2,7 @@
 # A d1000000 is a dice with 1000000 sides.
 
 T = int(input())
-total_solution = [] # This will be the list of solutions (each one a list)
+total_solution = [] # This will be the list of solutions (each one a max. leng)
 
 # Main algorithm:
 def solve_case(N:int, dices:list):
