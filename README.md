@@ -8,6 +8,7 @@ Here I let you the structure of problems and their competitions.
 
 # Google Coding Jam
 ## Google Code Jam 2022
-### Qualification round (problems solved)
+### Qualification round (solved problems)
 * Punched cards
 * 3D-Printing
+* d1000000
