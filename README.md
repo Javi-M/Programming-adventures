@@ -15,9 +15,10 @@ Here I let you the **structure** of problems and their **competitions/sites**. T
 # Google Coding Jam
 ## Google Code Jam 2022
 ### Qualification round
-* Punched cards :heavy_check_mark:
-* 3D-Printing :heavy_check_mark:
-* d1000000 :heavy_check_mark:
+* Punched cards :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
+* 3D-Printing :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
+* d1000000 :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
 * Chain-Reactions :x:
 ### Round-1A
-* Double-or-One-Thing :heavy_check_mark:
+* Double-or-One-Thing :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
+* Equal-Sum :grey_question: 
