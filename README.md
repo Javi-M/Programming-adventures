@@ -22,3 +22,4 @@ Here I let you the **structure** of problems and their **competitions/sites**. T
 ### Round-1A
 * Double-or-One-Thing :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
 * Equal-Sum :grey_question: 
+* Weightliftin

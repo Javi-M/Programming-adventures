@@ -6,6 +6,18 @@
 
 T = int(input())
 
-for case in range(T):
-    pass
+total_solution = []
 
+for case in range(T):
+    E, W = list(map(int, input().split())) # We suppose correct input
+    
+    # now it comes E lines
+    # each line is an exercises, with the weights required
+    exercises = []
+    machine_stack = []
+    for i in range(E):
+        pass
+
+
+for case in range(T):
+    print('Case #' + str(case+1) + total_solution[case])
