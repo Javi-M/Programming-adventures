@@ -25,7 +25,7 @@ def solve_case(modules, initiators, abyss):
 
 
 
-for case in range(0, T):
+for case in range(T):
     N = int(input()) # Number of modules of the case
     modules = [] # each module will be a dict. with 4 parameters
     initiators = []
@@ -35,7 +35,7 @@ for case in range(0, T):
     F = list(map(int, input().split())) # Fun factors
     P = list(map(int, input().split())) # Module i points to...(number)
     
-    for i in range(0, N): # Creating modules and adding them to modules list
+    for i in range(N): # Creating modules and adding them to modules list
         m = {
             'index': i+1, 
             'fun_factor':   F[i],
@@ -65,7 +65,7 @@ for case in range(0, T):
 
 # PRINT THE OUTPUT
 solutions = [str(c) for c in solutions] # converting int to str
-for case in range(0, T):
+for case in range(T):
     print('Case #' + str(case+1) + ': ' + solutions[case])
 
 

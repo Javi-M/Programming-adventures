@@ -8,6 +8,6 @@ T = int(input())
 
 
 
-for case in range(0, T):
+for case in range(T):
     N = int(input())
     # integers = list(map(int, input().split()))

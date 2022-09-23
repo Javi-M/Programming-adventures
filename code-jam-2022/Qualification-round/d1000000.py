@@ -14,7 +14,7 @@ def solve_case(N:int, dices:list):
     return ml
 
 # Solving all the cases:
-for case in range(0, T):
+for case in range(T):
     N = int(input())
     line = input().split()
     dices = [int(n) for n in line] # List comprehension!
@@ -22,6 +22,6 @@ for case in range(0, T):
 
 # Printing all the cases:
 total_solution = [str(c) for c in total_solution] # converting int to str
-for case in range(0, T):
+for case in range(T):
     print('Case #' + str(case+1) + ': ' + total_solution[case])
    

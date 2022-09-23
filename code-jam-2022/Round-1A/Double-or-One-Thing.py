@@ -7,7 +7,7 @@ total_solution = []
 def dob(str, i): # returns string with str[i] character doubled
     return str[0:i] + str[i] + str[i:]
 
-for case in range(0, T):
+for case in range(T):
     solution = input()
 
     # newstr: we double the letter in the position i, solution[i]
@@ -23,7 +23,7 @@ for case in range(0, T):
 
     total_solution.append(solution)
 
-for case in range(0, T):
+for case in range(T):
     print('Case #' + str(case+1) + ': ' + total_solution[case])
 
 

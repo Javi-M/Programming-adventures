@@ -6,7 +6,7 @@ triplets = []
 
 t = 0 # number of printers in the current triplet
 newtriplet = []
-for p in range(0, T*3):
+for p in range(T*3):
     l = input().split(' ')
     printer = [] # each printer is a list of 4 numbers
 
@@ -33,7 +33,7 @@ def casesolution(case):
     # Because of restrictions of the problem:
     mins = [10**6, 10**6, 10**6, 10**6]
     for printer in case:
-        for i in range(0, len(printer)):
+        for i in range(len(printer)):
             if printer[i] < mins[i]:
                 mins[i] = printer[i]
     
@@ -45,7 +45,7 @@ def casesolution(case):
     total = sum(solution)
     i = 0
 
-    for i in range(0, len(mins)):
+    for i in range(len(mins)):
         if total < 10**6:
             solution[i] = mins[i]
             total = total + mins[i]
@@ -58,5 +58,5 @@ def casesolution(case):
             str(solution[2]) + ' ' + \
             str(solution[3])
 
-for case in range(0, T):
+for case in range(T):
     print("Case #" + str(case+1) + ': ' + casesolution(triplets[case]))
