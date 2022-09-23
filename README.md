@@ -10,7 +10,7 @@ Here I let you the **structure** of problems and their **competitions/sites**. T
 
 :x: : Problem attempted, but failed
 
-:grey_question: Problem not attempted
+:grey_question: : Problem not attempted
 
 # Google Coding Jam
 ## Google Code Jam 2022
