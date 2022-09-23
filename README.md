@@ -7,8 +7,10 @@ I am not uploading the problems statements. You may want to check them out in th
 Here I let you the **structure** of problems and their **competitions/sites**. This **list** mainly shows the problems I have **solved**, not all the problems.
 
 :heavy_check_mark: : Problem Solved
+
 :x: : Problem attempted, but failed
-:grey_question: Problem not tried
+
+:grey_question: Problem not attempted
 
 # Google Coding Jam
 ## Google Code Jam 2022
