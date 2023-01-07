@@ -1,82 +1,62 @@
-# N modules
-# each module may point to another with lower index
-# Initiators: modules that are not pointed by any others
-# Initiators can be 'manually triggered'
-# F_i : fun factor.
+from itertools import permutations
 
-# Wile get max{F_i} fun of a chain reaction
-# In total, Wile get the sum of the fun of all chain reactions
+# To solve "indexing confusion": right shift to input lists: F and P
+# Also right shift triggered
+def trigger(idx, triggered, F, P):
+    max_fun = F[idx]
 
-# Each module (or node) has 4 components: 
-#   (index, fun_factor, it_points_to, is_triggered)
-# each module points to one or none, so we don't need a list to store
-# what the module is pointing at, just a number. 
+    if triggered[idx]:
+        return 0
 
-T = int(input())
-solutions = [] # Each solution (for each test case) is a number
+    triggered[idx] = True
 
+    if P[idx] == 0:
+        return F[idx]
+    else:
+        idx2 = P[idx]
+        f2 = trigger(idx2, triggered, F, P)
+        max_fun = max(max_fun, f2)
 
-# The idea is to make trees, one for each node pointing abyss,
-# with children and parent for each node
-def solve_case(modules, initiators, abyss):
-    # Build trees
-    trees = []
-    return 0
+    return max_fun
 
 
 
-for case in range(T):
-    N = int(input()) # Number of modules of the case
-    modules = [] # each module will be a dict. with 4 parameters
-    initiators = []
-    abyss = [] # modules pointing to void
-    # from each one of these I will make a tree (), inverting the
-    # triggering direction.
-    F = list(map(int, input().split())) # Fun factors
-    P = list(map(int, input().split())) # Module i points to...(number)
-    
-    for i in range(N): # Creating modules and adding them to modules list
-        m = {
-            'index': i+1, 
-            'fun_factor':   F[i],
-            'points_to':    P[i],
-            'triggered':    False,
-            'acum_fun':     0,
-            'order':        -1 # accumulated fun. with purposes for the algorithm
-        }
-        modules.append(m)
-        initiators.append(m)
+def solve_case(N, F, P):
+    F2 = [0] + F     # RIGHT SHIFT
+    P2 = [0] + P     # RIGHT SHIFT
 
-    for m in modules:
-        p = m['points_to']
+    inis = range(1, N+1)
+    initiators = [x for x in inis if not x in P2] # Not pointed by anything
+
+    all_possible_orders = list(permutations(initiators))
+
+    max_fun = 0
+
+    for order in all_possible_orders:
+        order_fun = 0
+        triggered = [True] + [False]*N # RIGHT SHIFT
+        for i in order:
+            chain_fun = trigger(i, triggered, F2, P2)
+            order_fun = order_fun + chain_fun
         
-        if p == 0:
-            abyss.append(m)
+        if order_fun > max_fun:
+            max_fun = order_fun
 
-        for i in initiators:
-            if i['index'] == p: # i.e, it is 'pointed'
-                initiators.remove(i)
-        
-    ##### NOW WE HAVE THE CASE PREPARED #####
-    # We have 'modules' and 'initiators'
-    solutions.append(solve_case(modules, initiators))
+    return max_fun
 
+if __name__ == "__main__":
+    solutions = []
 
+    T = int(input())
 
-# PRINT THE OUTPUT
-solutions = [str(c) for c in solutions] # converting int to str
-for case in range(T):
-    print('Case #' + str(case+1) + ': ' + solutions[case])
+    for case in range(T):
+        # Each test case has 3 input lines
+        N = int(input()) # Number of modules of the case
+        F = list(map(int, input().split())) # Fun factors
+        P = list(map(int, input().split())) # Module i points to P[i] (number)
+        solutions.append(solve_case(N, F, P))
 
+    solutions = [str(c) for c in solutions] # converting int to str
 
-
-
-
-# Trying stuff:
-print(modules)
-print('#############')
-print(len(modules))
-print('#############')
-print(initiators)
-print('#############')
-print(len(initiators))
+    for case in range(T):
+        print('Case #' + str(case+1) + ': ' + solutions[case])

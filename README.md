@@ -12,7 +12,7 @@ Here I let you the **structure** of problems and their **competitions/sites**. T
 
 :grey_question: : Problem not attempted
 
-# Google Coding Jam
+# Google Code Jam
 ## Google Code Jam 2022
 ### Qualification round
 * Punched cards :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
