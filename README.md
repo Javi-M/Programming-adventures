@@ -19,6 +19,9 @@ Here I let you the **structure** of problems and their **competitions/sites**. T
 * 3D-Printing :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
 * d1000000 :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
 * Chain-Reactions :x:
+    * Samples :heavy_check_mark:
+    * Test Set 1 :heavy_check_mark:
+    * Test Set 2 :x: Memory Limit Exceeded
 ### Round-1A
 * Double-or-One-Thing :heavy_check_mark: <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
 * Equal-Sum :grey_question: 
