@@ -7,19 +7,10 @@
 
 using namespace std;
 
-
 int main() 
 {
     ios_base::sync_with_stdio(false); //Template para prog. competitiva
     cin.tie(NULL); // Template para prog. competitiva
-
-    // while(c = getchar() != '.') funciona
-    // Si encuentra letra - punto - punto imprime la letra, sin '\n'.
-    /*string str;
-    getline(cin, str);
-    cout << str << endl;
-    cout << str[2] << endl; // funciona
-    */
     string line;
     while(getline(cin, line)){
         int n =  line.length();
@@ -32,3 +23,13 @@ int main()
     }
     return 0;
 }
+
+/* EXPLICACIÓN
+Cuando lee una linea, al encontrar una letra y 2 puntos, esa letra
+debe añadirse a la palabra. Al cambiar de línea de input,
+empezamos otra palabra.
+Como es apreciable, "line" es recorrida 2 veces:
+para recibirla con getline y para encontrar las letras y puntos.
+Poder recorrer cada linea de input una vez, caracter a caracter,
+aumentaría la velocidad.
+*/
