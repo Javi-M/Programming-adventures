@@ -31,7 +31,7 @@ Here I let you the **structure** of problems and their **competitions/sites**. T
 # Ada Byron
 https://ada-byron.es/quees.php
 
-An Spanish Universitary contest. And as such, all coments and code are in Spanish.
+A Spanish Universitary contest. And as such, all coments and code are in Spanish.
 
 ## Ada Byron 2023 - Problemas de práctica
 * Codificación límite :heavy_check_mark: <img src="https://img.shields.io/badge/-c++-black?logo=c%2B%2B&style=socia"/> 
