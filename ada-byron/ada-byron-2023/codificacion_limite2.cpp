@@ -17,30 +17,32 @@ int main()
 
     char c_in; // Caracter leyendo de entrada
     char c_w; // Caracter de la palabra a imprimir
-
-    scanf("%c", &c_in);
-    while(c_in != EOF){
-        cin >> c_in;
+    bool letra = false;
+    bool punto = false;
+    bool palabra = false;
+    // EOF es el valor que toma c_in cuando no hay más entradas
+    while((c_in = std::getchar()) != EOF){
         if(c_in == '\n'){
-            cout << '\n';
-        }else if(c_in != '.'){
-            c_w = c_in;
-            scanf("%c", &c_in);
+            if(palabra){
+                printf("\n");
+            }
+            letra = palabra = punto = false;
+        }else{
             if(c_in == '.'){
-                scanf("%c", &c_in);
-                if(c_in == '.'){
-                    // Si llega aquí, ha encontrado
-                    // letra-punto-punto, y se añade la letra
-                    cout << c_w;
-                }else if(c_in == '\n'){
-                    cout << '\n';
+                if(letra && punto){
+                    printf("%c", c_w);
+                    palabra = true;
+                    letra = false;
+                }else{
+                    punto = true;
                 }
-            }else if(c_in == '\n'){
-                cout << '\n';
+            }else{
+                c_w = c_in;
+                letra = true;
+                punto = false;
             }
         }
     }
-
     return 0;
 }
 
